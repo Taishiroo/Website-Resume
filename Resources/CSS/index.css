@@ -1,0 +1,65 @@
+body {
+    background-color:white;
+    height: 1000vh;
+
+  }
+h1 {
+    color: blue;
+  }
+
+
+
+p {
+    color: red;
+  }
+
+
+.topnav {
+
+  overflow: hidden; 
+  background-color:white;
+  padding: 3px;
+  text-align:center;
+  padding: 32px;
+  
+}
+
+.topnav a{
+
+  padding: 10px;
+  color: black ;
+}
+.topnav a:hover{
+  background-color:rgb(161, 161, 161);
+  color:black;
+  padding: 30px;
+  font-size: 17px
+
+}
+
+.topnav a:active{
+  background-color: orange;
+  color: blanchedalmond;
+}
+
+#Heading {
+  text-align: center;
+  color: black;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  float: left 
+}
+
+.container{
+
+  width: 100%;
+  height: 500px;
+  background-position: center;
+  background-size: cover;
+  background-image: url(https://coolbackgrounds.io/images/unsplash/samuel-zeller-medium-b832fe04.jpg);
+  background-attachment:fixed;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+}
+
