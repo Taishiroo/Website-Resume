@@ -1,0 +1,36 @@
+
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center ; 
+    min-height: 100vh;
+    background: #096a55;
+}
+
+section::before{
+
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: #fff38e;
+}
+
+
+.container{
+    position: relative;
+    min-width: 1100px;
+    min-height: 550px;
+    display: flex; 
+    z-index: 1000;
+    background: #ffff;
+}
+
+.container .containerInfo{
+
+    position: absolute; 
+    top: 40px;
+}

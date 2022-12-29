@@ -30,10 +30,12 @@ p {
   color: black ;
 }
 .topnav a:hover{
-  background-color:rgb(161, 161, 161);
-  color:black;
-  padding: 30px;
-  font-size: 17px
+  background-color:rgb(0, 0, 0);
+  color:rgb(255, 255, 255);
+  padding: 21px;
+  font-size: 17px;
+  border-radius: 20px;
+  box-shadow: 3px 1px 8px -1px #888888;
 
 }
 
@@ -62,4 +64,7 @@ p {
   justify-content: center;
   align-items:center;
 }
+.container h1{
+  color: rgb(255, 255, 255);
 
+}
