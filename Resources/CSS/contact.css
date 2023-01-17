@@ -1,36 +1,249 @@
 
+*{
+    margin: 0; /* MArgin adds space around the element  */ 
+    padding: 0; /* like the MAring it add spaces around the element within the border of the element*/
+    box-sizing: border-box; /*This allows padding of element to be added towards the total length and width of elements so the padding doesnt exceeed total length and width*/
+    font-family: 'Poppins'  , sans-serif; 
 
-section{
-    display: flex;
-    justify-content: center;
-    align-items: center ; 
-    min-height: 100vh;
-    background: #096a55;
 }
 
+
+.topnav {
+
+    overflow: hidden; 
+    background-color:white;
+    padding: 3px;
+    text-align:center;
+    padding: 32px;
+    width: 100%;
+    align-items: center ; 
+    
+    
+  }
+  
+  .topnav a{
+  
+    padding: 10px;
+    color: black ;
+  }
+  .topnav a:hover{
+    background-color:rgb(0, 0, 0);
+    color:rgb(255, 255, 255);
+    padding: 21px;
+    font-size: 17px;
+    border-radius: 20px;
+    box-shadow: 3px 1px 8px -1px #888888;
+  
+  }
+  
+  .topnav a:active{
+    background-color: orange;
+    color: blanchedalmond;
+  }
+  
+  #Heading {
+    text-align: center;
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    float: left;
+    padding-right: 250px;
+  }
+
+section{
+    display: flex; /* displays elements next to each other in this container */
+    justify-content: center; /* centers content in the center  only horizontlly*/
+    align-items: center ; /* aligns items vertically */
+    min-height: 100vh; /* min height of the section*/
+    background: #6d6c68;
+}
+
+/* Add an element before all the selected elements with the contents below. Again only for the selcted elements*/
 section::before{
 
-    content: '';
+    content: ''; 
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 50%;
-    height: 100%;
-    background: #fff38e;
+    top: 1; /* How far the content is from the top */
+    left: 0; /*how far the coontents of this element is from the left */
+    width: 50%; /* the horizontal size of the element according to the percentage of the whole screen */
+    height: 100%; /* the vertical size of the element according to the percentage of the whole screen */
+    background: #6d6c68;
 }
 
 
 .container{
-    position: relative;
+    position: relative; /*this element is positoin relative to it self and its parent element if it has one so doesnt break the flow of the webpage*/
     min-width: 1100px;
     min-height: 550px;
-    display: flex; 
+    display: flex;  
     z-index: 1000;
-    background: #ffff;
+
 }
 
-.container .containerInfo{
 
+.container .contactInfo
+{
     position: absolute; 
     top: 40px;
+    width: 350px;
+    height: calc(100% - 80px);
+    background: #e6e2e2;
+    z-index: 1;
+    padding: 40px;
+   
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 20px 25px rgba(0,0,0,0.15)
+}
+
+.container .contactInfo h2
+{
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+    font-weight: 500; /*font weight refers to the thickness of the text */
+}
+
+.container .contactInfo ul.info
+{
+    position: relative;
+    margin: 20px 0;
+
+
+}
+.container .contactInfo ul.info li/*refer to this again */
+{
+    position: relative;
+    list-style: none;
+    display: flex;
+    margin: 20px 0;
+    align-items: flex-start;
+
+
+}
+.container .contactInfo ul.info li span:nth-child(1)
+{
+    width: 30px;
+    min-width: 30px;
+
+
+}
+
+.container .contactInfo ul.info li span:nth-child(1) img
+{
+    max-width: 100%;
+
+}
+
+.container .contactInfo ul.info li span:nth-child(2) 
+{
+    color: rgb(12, 12, 12);
+    margin-left: 10px;
+    font-weight: 300;
+}
+
+.container .contactInfo ul.sci
+{
+    position: relative;
+    display:flex;   
+}
+
+
+.container .contactInfo ul.sci li
+{
+    margin-top: 200px;
+    list-style:none;
+    margin-right: 15px;
+    
+}
+
+.container .contactForm
+{
+    position: absolute;
+    padding: 70px 50px;
+    padding-left: 250px;
+    margin-left: 150px;
+    width: calc(100% - 150px);
+    height: 100%;
+    background: #fff;
+    box-shadow: 0 50px 50px rgba(0,0,0,0.25);
+
+}
+
+.container .contactForm h2
+{
+    color: #0f3959;
+    font-size: 24px;
+    font-weight: 500;
+}
+.container .contactForm .formBox
+{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+
+
+.container .contactForm .formBox .inputBox
+{
+    position: relative;
+    margin-bottom: 35px;
+}
+
+.container .contactForm .formBox .inputBox.w50
+{
+    width:47%;
+}
+
+.container .contactForm .formBox .inputBox.w100
+{
+    width: 100%;
+}
+
+.container .contactForm .formBox .inputBox input,
+.container .contactForm .formBox .inputBox textarea   
+{
+    width: 100%;
+    resize: none;
+    padding: 5px 0;
+    font-size: 18px;
+    font-weight: 300;
+    color: black;
+    border: none;
+    outline: none;  
+    border-bottom: 1px solid #777;
+}
+
+.container .contactForm .formBox .inputBox textarea   
+{
+    height: 120px;
+
+}
+
+.container .contactForm .formBox .inputBox span
+{
+   position:absolute;
+   left:0;
+   padding: 5px, 0;
+   pointer-events: none;
+   font-size: 18px;
+   font-weight:300;
+   transition:0.3s;
+
+}
+
+
+.container .contactForm .formBox .inputBox input:focus ~ span,
+.container .contactForm .formBox .inputBox input:valid ~ span,
+.container .contactForm .formBox .inputBox textarea:focus ~ span ,
+.container .contactForm .formBox .inputBox textarea:valid ~ span
+{
+
+    transform: translateY(-20px);
+    font-size: 12px;
+    font-weight:400;
+    letter-spacing: 1px;
+
 }

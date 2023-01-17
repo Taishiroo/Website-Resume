@@ -1,6 +1,8 @@
 body {
+    padding-top:150px;
     background-color:white;
     height: 1000vh;
+    
 
   }
 h1 {
@@ -13,6 +15,13 @@ p {
     color: red;
   }
 
+.fixed{
+  top:0;
+  position: fixed;
+  display: flex;
+  border-bottom: 2px solid black;
+  
+}
 
 .topnav {
 
@@ -21,6 +30,9 @@ p {
   padding: 3px;
   text-align:center;
   padding: 32px;
+  width: 100%;
+  align-items: center ; 
+  
   
 }
 
@@ -48,7 +60,8 @@ p {
   text-align: center;
   color: black;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  float: left 
+  float: left;
+  padding-right: 250px;
 }
 
 .container{
@@ -68,3 +81,4 @@ p {
   color: rgb(255, 255, 255);
 
 }
+

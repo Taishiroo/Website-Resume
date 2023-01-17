@@ -8,22 +8,99 @@
     <title>Document</title>
 </head>
 <body>
-    <h1> Contact Me</h1>
-    <nav>
+    
+    <nav class = "topnav fixed">
+        <h1 id="Heading" >Contact Me</h1>
         <a href="./index.html">Home</a>
         <a href="./about.html">About Me</a>
         <a href="./contact.html"> Contact</a>
-
+        
     </nav>
+    
 
     <section>
         
         <div class="container">
-            <div class="contactInfo"></div>
-            <div class="contactForm"></div>
+            
+            <div class="contactInfo">
+                <div>
+                <h2>Contact Info</h2>
+                <ul class="info"> 
+                    
+                    <li>
+                        <span><img src = ".\Resources\Images\mail.png"></span> <!-- Span is a generic container tag --> 
+                        <span>antonyrejikurian@gmail.com</span>
+                        
+                    </li>
+                    <li>
+                        <span><img src = ".\Resources\Images\call.png"></span> <!-- Span is a generic container tag --> 
+                        <span>+61 469 849 402</span>
+                        
+                    </li>
+                </ul>
+            </div>
+            <ul class = "sci">
+                <li hidden><a href="#"><img src =".\Resources\Images\1.png"></a><li>
+                <li hidden><a href="#"><img src =".\Resources\Images\2.png"></a><li>
+                <li hidden><a href="#"><img src =".\Resources\Images\3.png"></a><li>
+                <li hidden><a href="#"><img src =".\Resources\Images\4.png"></a><li>
+                <li hidden><a href="#"><img src =".\Resources\Images\5.png"></a><li>
+            </ul>
         </div>
 
-    </section>
+        <div class="contactForm">
+            <h2>Send A Message</h2>
+            <form onsubmit="sendEmail(); reset(); return false;">
+            <div class="formBox">
+                
+                <div class = "inputBox w50">
+                    <input type="text" id = "firstName" required>
+                    <span>First Name</span>
+                </div>
+                <div class = "inputBox w50">
+                    <input type="text" id = "lastName" required>
+                    <span>Last Name</span>
+                </div>
+                <div class = "inputBox w50">
+                    <input type="email" id = "email" required>
+                    <span>Email Address</span>
+                </div>
+                <div class = "inputBox w50">
+                    <input type="text" id = "number" required>
+                    <span>Mobile Number</span>
+                </div>
+                <div class = "inputBox w100">
+                    <textarea id = "message" required></textarea>
+                    <span>Write your message here...</span>
+                </div>
+                <div class = "inputBox w100">
+                    <input type="submit" value="Send">
+                </div>
+            </div>
+        </form>
 
+        </div>
+        
+    </div>
+
+        
+    </section>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+    function sendEmail(){
+        Email.send({
+            SecureToken : "4d0b888e-88d1-47c9-9032-c9c07e571660",
+            To : "rabbitgamer1000@gmail.com",
+            From : "antonyrejikurian@gmail.com",
+            Subject : "This is the subject",
+            Body : "And this is the body"
+        }).then(
+            function (message) {
+                alert("Email successfully sent")
+        });
+
+    }
+</script>
 </body>
 </html>
+
