@@ -1,6 +1,22 @@
 
-.topnav {
+body {
+  padding-top:150px;
+  background-color:white;
+  height: 1000vh;
+  
 
+}
+
+.fixed{
+    top:0;
+    position: fixed;
+    display: flex;
+    border-bottom: 2px solid black;
+    
+  }
+  
+  .topnav {
+  
     overflow: hidden; 
     background-color:white;
     padding: 3px;
@@ -8,12 +24,12 @@
     padding: 32px;
     width: 100%;
     align-items: center ; 
-    
+    z-index: 1;
     
   }
   
   .topnav a{
-  
+    
     padding: 10px;
     color: black ;
   }
@@ -38,4 +54,38 @@
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     float: left;
     padding-right: 250px;
+  }
+
+  .about h1, h2{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;    
+    display: block;
+  }
+
+  .about{
+
+
+    top:0;
+    background-color: #e6e2e2;
+    min-height: 100vh;
+    color:rgb(26, 24, 24);
+    padding-left:  20%;
+  }
+  
+  .about ::before{ 
+
+    content: '';
+    display: flex;
+    top: 156px  ;
+    left:0;
+    width:20%;
+    height: 100%;
+    background-color:#6d6c68;
+    position: absolute;
+    
+  }
+  .gif{
+   border-radius: 50%;
+   width:200px;
+   height:200px;
+   object-fit: cover;
   }
