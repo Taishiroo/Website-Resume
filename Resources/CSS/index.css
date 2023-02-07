@@ -1,10 +1,11 @@
-body {
-    padding-top:150px;
-    background-color:white;
-    height: 1000vh;
-    
 
-  }
+body {
+  padding-top:105px;
+  background-color:white;
+  min-height: 100vh;
+  
+
+}
 h1 {
     color: blue;
   }
@@ -27,7 +28,7 @@ p {
 
   overflow: hidden; 
   background-color:white;
-  padding: 3px;
+  left:0;
   text-align:center;
   padding: 32px;
   width: 100%;
